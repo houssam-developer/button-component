@@ -1,13 +1,64 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+:root {
+	--ff-primary: 'Poppins', Arial, Helvetica, sans-serif;
+
+	--btn-color-outline: #0275d8;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--ff-primary);
+	padding: .3em;
+}
+
+.container {
+	padding: 1em;
+	border: 1px solid #444;
+	min-height: calc(100vh - 1em);
+}
+
+.btn {
+	padding: .7em 1.4em;
+	font-family: var(--ff-primary);
+	font-weight: 500;
+	font-size: 1rem;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.btn--default {
+	color: #444;
+}
+
+.btn--default:hover,
+.btn--default:focus {
+	background-color: #aaa;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.20);
+}
+
+.btn--text,
+.btn--outline {
+	color: var(--btn-color-outline);
+	background-color: #fff;
+}
+
+.btn--outline {
+	border: 1px solid var(--btn-color-outline);
+}
+
+.btn--outline:hover,
+.btn--outline:focus {
+	background-color: hsla(208, 98%, 91%, 0.59);
+}
+
+.btn--text:hover,
+.btn--text:focus {
+	background-color: hsla(208, 98%, 91%, 0.59);
 }
