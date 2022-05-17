@@ -1,7 +1,7 @@
 import React from 'react';
 import * as MdIcons from 'react-icons/md';
 
-function Button({ text, variant = 'default', disableShadow, disabled, startIcon = '', endIcon = '' }) {
+function Button({ text, variant = 'default', disableShadow, disabled, startIcon = '', endIcon = '', size = '' }) {
 	// TODO guard clause in case of incorrect variant
 
 
@@ -13,6 +13,12 @@ function Button({ text, variant = 'default', disableShadow, disabled, startIcon 
 	if (disableShadow) { setClassNames = `${setClassNames} btn--disableshadow` }
 	if (disabled) { setClassNames = `${setClassNames} btn--disabled` }
 
+	if (size === 'sm') { setClassNames = `${setClassNames} btn-size--small`; }
+	if (size === 'md') { setClassNames = `${setClassNames} btn-size--medium`; }
+	if (size === 'lg') { setClassNames = `${setClassNames} btn-size--large`; }
+
+
+	// ICON
 	let startIconVal;
 	let endIconVal;
 

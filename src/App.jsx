@@ -40,6 +40,16 @@ function App() {
 					<Button text="Default" variant='primary' endIcon='MdAddShoppingCart' />
 				</div>
 			</div>
+
+			<div className='container-box'>
+				<h2>Size Button</h2>
+				<div className='container-buttons'>
+					<Button text="Default" variant='primary' size='sm' />
+					<Button text="Default" variant='primary' />
+					<Button text="Default" variant='primary' size='lg' />
+
+				</div>
+			</div>
 		</div>
 	)
 }

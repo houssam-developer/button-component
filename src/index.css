@@ -9,6 +9,9 @@
 
 	--btn-fg-disabled: #aaa;
 	--btn-bg-disabled: #e2e2e2;
+
+	--btn-padding-block: .5em;
+	--btn-padding-inline: 1.4em;
 }
 
 * {
@@ -42,7 +45,7 @@ h2 {
 }
 
 .container-box {
-	min-width: 300px;
+	min-width: 500px;
 	padding: 1em;
 	border-radius: 10px;
 	background-color: #fff;
@@ -56,17 +59,19 @@ h2 {
 }
 
 .container-buttons {
+	width: 100%;
 	display: flex;
+	align-items: center;
 	gap: 1em;
 }
 
 .btn {
-	padding: .7em 1.4em;
+	padding: var(--btn-padding-block) var(--btn-padding-inline);
 	font-family: var(--ff-primary);
 	font-weight: 500;
 	font-size: 1rem;
 	border: none;
-	border-radius: 10px;
+	border-radius: 7px;
 	cursor: pointer;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
@@ -127,4 +132,19 @@ h2 {
 .btn--text.btn--disabled:focus,
 .btn--text.btn--disabled:hover {
 	background-color: var(--btn-color--white);
+}
+
+.btn-size--small {
+	--btn-padding-block: .3em;
+	--btn-padding-inline: .7em;
+}
+
+.btn-size--medium {
+	--btn-padding-block: .5em;
+	--btn-padding-inline: 1.4em;
+}
+
+.btn-size--large {
+	--btn-padding-block: .9em;
+	--btn-padding-inline: 1.8em;
 }
