@@ -8,26 +8,37 @@ function App() {
 		<div className="container">
 			<h1>Buttons</h1>
 
-			<div className='container-buttons'>
+			<div className='container-box'>
 				<h2>Default</h2>
 				<Button text="Default" />
 			</div>
-			<div className='container-buttons'>
+			<div className='container-box'>
 				<h2>Outline</h2>
 				<Button text="Default" variant='outline' />
 			</div>
-			<div className='container-buttons'>
+			<div className='container-box'>
 				<h2>Text</h2>
 				<Button text="Default" variant='text' />
 			</div>
-			<div className='container-buttons'>
+			<div className='container-box'>
 				<h2>Disable Shadow</h2>
 				<Button text="Default" variant='primary' disableShadow />
 			</div>
 
-			<div className='container-buttons'>
+			<div className='container-box'>
 				<h2>Disabled Button</h2>
-				<Button text="Default" disabled />
+				<div className='container-buttons'>
+					<Button text="Default" disabled />
+					<Button text="Default" disabled variant='text' />
+				</div>
+			</div>
+
+			<div className='container-box'>
+				<h2>Icon Button</h2>
+				<div className='container-buttons'>
+					<Button text="Default" variant='primary' startIcon='MdAddShoppingCart' />
+					<Button text="Default" variant='primary' endIcon='MdAddShoppingCart' />
+				</div>
 			</div>
 		</div>
 	)
