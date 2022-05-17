@@ -3,7 +3,8 @@
 :root {
 	--ff-primary: 'Poppins', Arial, Helvetica, sans-serif;
 
-	--btn-color-outline: #0275d8;
+	--btn-color--primary: #0275d8;
+	--btn-color--white: #fff;
 }
 
 * {
@@ -15,12 +16,40 @@
 body {
 	font-family: var(--ff-primary);
 	padding: .3em;
+	background-color: #eee;
+}
+
+h1,
+h2 {
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 1.2rem;
 }
 
 .container {
 	padding: 1em;
-	border: 1px solid #444;
 	min-height: calc(100vh - 1em);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: .3em;
+}
+
+.container-buttons {
+	min-width: 300px;
+	padding: 1em;
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2em;
+
 }
 
 .btn {
@@ -31,6 +60,7 @@ body {
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .btn--default {
@@ -40,25 +70,30 @@ body {
 .btn--default:hover,
 .btn--default:focus {
 	background-color: #aaa;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.20);
 }
 
 .btn--text,
 .btn--outline {
-	color: var(--btn-color-outline);
+	color: var(--btn-color--primary);
 	background-color: #fff;
 }
 
 .btn--outline {
-	border: 1px solid var(--btn-color-outline);
+	border: 1px solid var(--btn-color--primary);
 }
 
 .btn--outline:hover,
-.btn--outline:focus {
-	background-color: hsla(208, 98%, 91%, 0.59);
-}
-
+.btn--outline:focus,
 .btn--text:hover,
 .btn--text:focus {
 	background-color: hsla(208, 98%, 91%, 0.59);
+}
+
+.btn--primary {
+	color: var(--btn-color--white);
+	background-color: var(--btn-color--primary);
+}
+
+.btn--disableshadow {
+	box-shadow: none;
 }
