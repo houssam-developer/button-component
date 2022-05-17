@@ -1,6 +1,8 @@
 
 import './App.css'
 import Button from './components/Button'
+import Footer from './components/Footer'
+
 
 function App() {
 
@@ -22,7 +24,7 @@ function App() {
 			</div>
 			<div className='container-box'>
 				<h2>Disable Shadow</h2>
-				<Button text="Default" variant='primary' disableShadow />
+				<Button text="Default" color='primary' disableShadow />
 			</div>
 
 			<div className='container-box'>
@@ -36,8 +38,8 @@ function App() {
 			<div className='container-box'>
 				<h2>Icon Button</h2>
 				<div className='container-buttons'>
-					<Button text="Default" variant='primary' startIcon='MdAddShoppingCart' />
-					<Button text="Default" variant='primary' endIcon='MdAddShoppingCart' />
+					<Button text="Default" color='primary' startIcon='MdAddShoppingCart' />
+					<Button text="Default" color='primary' endIcon='MdAddShoppingCart' />
 				</div>
 			</div>
 
@@ -50,6 +52,18 @@ function App() {
 
 				</div>
 			</div>
+
+			<div className='container-box'>
+				<h2>Color Button</h2>
+				<div className='container-buttons'>
+					<Button text="Default" color='primary' />
+					<Button text="Secondary" color='secondary' />
+					<Button text="Danger" color='danger' />
+
+				</div>
+			</div>
+
+			<Footer></Footer>
 		</div>
 	)
 }
