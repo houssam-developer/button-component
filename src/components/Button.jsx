@@ -10,6 +10,13 @@ function Button({ text, variant = 'default', disableShadow, disabled, startIcon 
 	if (variant === '') { variant = 'default'; }
 	let setClassNames = `btn btn-variant--${variant}`;
 
+
+	if (color === 'default') { setClassNames = `${setClassNames} btn--default`; }
+	if (color === 'primary') { setClassNames = `${setClassNames} btn--primary`; }
+	if (color === 'secondary') { setClassNames = `${setClassNames} btn--secondary`; }
+	if (color === 'danger') { setClassNames = `${setClassNames} btn--danger`; }
+
+
 	if (disableShadow) { setClassNames = `${setClassNames} btn--disableshadow` }
 	if (disabled) { setClassNames = `${setClassNames} btn--disabled` }
 
@@ -17,10 +24,6 @@ function Button({ text, variant = 'default', disableShadow, disabled, startIcon 
 	if (size === 'md') { setClassNames = `${setClassNames} btn-size--medium`; }
 	if (size === 'lg') { setClassNames = `${setClassNames} btn-size--large`; }
 
-	if (color === 'default') { setClassNames = `${setClassNames} btn--default`; }
-	if (color === 'primary') { setClassNames = `${setClassNames} btn--primary`; }
-	if (color === 'secondary') { setClassNames = `${setClassNames} btn--secondary`; }
-	if (color === 'danger') { setClassNames = `${setClassNames} btn--danger`; }
 
 	// ICON
 	let startIconVal;

@@ -56,6 +56,7 @@ function App() {
 			<div className='container-box'>
 				<h2>Color Button</h2>
 				<div className='container-buttons'>
+					<Button text="Default" color='default' />
 					<Button text="Default" color='primary' />
 					<Button text="Secondary" color='secondary' />
 					<Button text="Danger" color='danger' />

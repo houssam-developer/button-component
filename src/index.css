@@ -99,6 +99,7 @@ h2 {
 	border: none;
 	border-radius: 7px;
 	cursor: pointer;
+	color: #444;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 
 	display: flex;
@@ -165,7 +166,6 @@ h2 {
 	--btn-padding-inline: 1.8em;
 }
 
-
 /* ---------
  * 🔹 COLOR
  * --------- */
@@ -178,6 +178,37 @@ h2 {
 	background-color: var(--btn-color--gray);
 }
 
+.btn-variant--outline.btn--default {
+	color: var(--btn-color--primary);
+}
+
+.btn-variant--outline.btn--default:hover,
+.btn-variant--outline.btn--default:focus {
+	background-color: hsla(208, 98%, 91%, 0.59);
+}
+
+.btn-variant--text.btn--default {
+	color: var(--btn-color--primary);
+}
+
+.btn-variant--text.btn--default:hover,
+.btn-variant--text.btn--default:focus {
+	background-color: hsla(208, 98%, 91%, 0.59);
+}
+
+.btn--disabled.btn--default {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
+.btn--disabled.btn--default:hover,
+.btn--disabled.btn--default:focus {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
+/* PRIMARY */
+
 .btn--primary {
 	color: var(--btn-color--white);
 	background-color: var(--btn-color--primary);
@@ -186,6 +217,37 @@ h2 {
 .btn--primary:hover,
 .btn--primary:focus {
 	background-color: hsla(231, 48%, 30%, 1);
+}
+
+.btn-variant--outline.btn--primary {
+	color: var(--btn-color--primary);
+	background-color: var(--btn-color--white);
+}
+
+.btn-variant--outline.btn--primary:hover,
+.btn-variant--outline.btn--primary:focus {
+	background-color: hsla(208, 98%, 91%, 0.59);
+}
+
+.btn-variant--text.btn--primary {
+	color: var(--btn-color--primary);
+	background-color: var(--btn-color--white);
+}
+
+.btn-variant--text.btn--primary:hover,
+.btn-variant--text.btn--primary:focus {
+	background-color: hsla(208, 98%, 91%, 0.59);
+}
+
+.btn--disabled.btn--primary {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
+.btn--disabled.btn--primary:hover,
+.btn--disabled.btn--primary:focus {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
 }
 
 .btn--secondary {
@@ -198,6 +260,38 @@ h2 {
 	background-color: hsla(120, 7%, 13%, 1);
 }
 
+.btn-variant--outline.btn--secondary {
+	color: hsla(120, 7%, 30%, 1);
+	background-color: var(--btn-color--white);
+	border-color: hsla(120, 7%, 30%, 1);
+}
+
+.btn-variant--outline.btn--secondary:hover,
+.btn-variant--outline.btn--secondary:focus {
+	background-color: hsla(208, 98%, 81%, 0.59);
+}
+
+.btn-variant--text.btn--secondary {
+	color: hsla(120, 7%, 30%, 1);
+	background-color: var(--btn-color--white);
+}
+
+.btn-variant--text.btn--secondary:hover,
+.btn-variant--text.btn--secondary:focus {
+	background-color: hsla(120, 7%, 90%, 1);
+}
+
+.btn--disabled.btn--secondary {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
+.btn--disabled.btn--secondary:hover,
+.btn--disabled.btn--secondary:focus {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
 .btn--danger {
 	color: var(--btn-color--white);
 	background-color: hsla(2, 64%, 58%, 1);
@@ -206,6 +300,39 @@ h2 {
 .btn--danger:hover,
 .btn--danger:focus {
 	background-color: hsla(2, 64%, 36%, 1);
+}
+
+
+.btn-variant--outline.btn--danger {
+	color: hsla(2, 64%, 58%, 1);
+	border-color: hsla(2, 64%, 58%, 1);
+	background-color: var(--btn-color--white);
+}
+
+.btn-variant--outline.btn--danger:hover,
+.btn-variant--outline.btn--danger:focus {
+	background-color: hsla(2, 64%, 95%, 1);
+}
+
+.btn-variant--text.btn--danger {
+	color: hsla(2, 64%, 58%, 1);
+	background-color: var(--btn-color--white);
+}
+
+.btn-variant--text.btn--danger:hover,
+.btn-variant--text.btn--danger:focus {
+	background-color: hsla(2, 64%, 95%, 1);
+}
+
+.btn--disabled.btn--danger {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
+.btn--disabled.btn--danger:hover,
+.btn--disabled.btn--danger:focus {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
 }
 
 .created-by {
