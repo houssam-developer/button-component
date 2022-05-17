@@ -5,6 +5,10 @@
 
 	--btn-color--primary: #0275d8;
 	--btn-color--white: #fff;
+	--btn-color--gray: #aaa;
+
+	--btn-fg-disabled: #aaa;
+	--btn-bg-disabled: #e2e2e2;
 }
 
 * {
@@ -37,7 +41,7 @@ h2 {
 	gap: .3em;
 }
 
-.container-buttons {
+.container-box {
 	min-width: 300px;
 	padding: 1em;
 	border-radius: 10px;
@@ -49,7 +53,11 @@ h2 {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 2em;
+}
 
+.container-buttons {
+	display: flex;
+	gap: 1em;
 }
 
 .btn {
@@ -69,13 +77,13 @@ h2 {
 
 .btn--default:hover,
 .btn--default:focus {
-	background-color: #aaa;
+	background-color: var(--btn-color--gray);
 }
 
 .btn--text,
 .btn--outline {
 	color: var(--btn-color--primary);
-	background-color: #fff;
+	background-color: var(--btn-color--white);
 }
 
 .btn--outline {
@@ -96,4 +104,23 @@ h2 {
 
 .btn--disableshadow {
 	box-shadow: none;
+}
+
+.btn--disabled {
+	color: var(--btn-fg-disabled);
+	background-color: var(--btn-bg-disabled);
+}
+
+.btn--disabled:focus,
+.btn--disabled:hover {
+	background-color: var(--btn-bg-disabled);
+}
+
+.btn--text.btn--disabled {
+	background-color: var(--btn-color--white);
+}
+
+.btn--text.btn--disabled:focus,
+.btn--text.btn--disabled:hover {
+	background-color: var(--btn-color--white);
 }
