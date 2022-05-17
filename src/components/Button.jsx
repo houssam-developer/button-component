@@ -4,18 +4,22 @@ import * as MdIcons from 'react-icons/md';
 function Button({ text, variant = 'default', disableShadow, disabled, startIcon = '', endIcon = '', size = '', color = 'default' }) {
 	// TODO guard clause in case of incorrect variant
 
-
 	console.log(`#text: ${text} #variant: ${variant} #disableShadow: ${disableShadow} #disabled: ${disabled} `);
 
-	if (variant === '') { variant = 'default'; }
-	let setClassNames = `btn btn-variant--${variant}`;
+	let setClassNames = `btn`;
 
+	if (color === 'default') { addColor('button--default'); }
+	if (color === 'primary') { addColor(color); }
+	if (color === 'secondary') { addColor(color); }
+	if (color === 'danger') { addColor(color); }
 
-	if (color === 'default') { setClassNames = `${setClassNames} btn--default`; }
-	if (color === 'primary') { setClassNames = `${setClassNames} btn--primary`; }
-	if (color === 'secondary') { setClassNames = `${setClassNames} btn--secondary`; }
-	if (color === 'danger') { setClassNames = `${setClassNames} btn--danger`; }
+	function addColor(targetVal) {
+		if (variant === 'default') { setClassNames += ` ${targetVal}`; }
+		if (variant === 'text') { setClassNames += ` ${targetVal}--text`; }
+		if (variant === 'outline') { setClassNames += ` ${targetVal}--outline`; }
+	}
 
+	console.log('setClassNames: ', setClassNames);
 
 	if (disableShadow) { setClassNames = `${setClassNames} btn--disableshadow` }
 	if (disabled) { setClassNames = `${setClassNames} btn--disabled` }

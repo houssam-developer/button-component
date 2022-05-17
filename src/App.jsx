@@ -16,11 +16,21 @@ function App() {
 			</div>
 			<div className='container-box'>
 				<h2>Outline</h2>
-				<Button text="Default" variant='outline' />
+				<div className="container-buttons">
+					<Button text="Default" variant='outline' color='default' />
+					<Button text="Default" variant='outline' color='primary' />
+					<Button text="Default" variant='outline' color='secondary' />
+					<Button text="Default" variant='outline' color='danger' />
+				</div>
 			</div>
 			<div className='container-box'>
 				<h2>Text</h2>
-				<Button text="Default" variant='text' />
+				<div className="container-buttons">
+					<Button text="Default" variant='text' color='default' />
+					<Button text="Default" variant='text' color='primary' />
+					<Button text="Default" variant='text' color='secondary' />
+					<Button text="Default" variant='text' color='danger' />
+				</div>
 			</div>
 			<div className='container-box'>
 				<h2>Disable Shadow</h2>
