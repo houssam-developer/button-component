@@ -9,11 +9,15 @@ import ToggleButton from './components/ToggleButton'
 
 function App() {
 	const [targetVariant, setTargetVariant] = useState('default');
+	const [targetIcon, setTargetIcon] = useState('MdAddShoppingCart');
 	const [disableShadow, setDisableShadow] = useState(true);
 	const [disabled, setDisabled] = useState(false);
+	const [variantOptions, setVariantOptions] = useState([]);
+	const [iconsOptions, setIconsOptions] = useState([]);
 
 	useEffect(() => {
-		const variantOptions = ['']
+		setVariantOptions(['Default', 'Outline', 'Text']);
+		setIconsOptions(['MdAddShoppingCart', 'MdAccountCircle', 'MdDns', 'MdMarkunreadMailbox', 'MdQuestionAnswer']);
 	}, []);
 
 	function handleCheckEvent(e) {
@@ -23,16 +27,22 @@ function App() {
 
 	function handleVariantEvent(e) {
 		const targetSelect = e.target; // target is the element that emits the event
-		const targetOption = targetSelect.options[targetSelect.selectedIndex].text;
-
+		const targetOption = targetSelect.options[targetSelect.selectedIndex].value;
 		setTargetVariant(targetOption.toLowerCase());
+	}
+
+	function handleIconOptionEvent(e) {
+		console.log('iconEvent: ', e);
+		const targetSelect = e.target; // target is the element that emits the event
+		const targetOption = targetSelect.options[targetSelect.selectedIndex].value;
+		setTargetIcon(targetOption);
 	}
 
 	return (
 		<div className="container">
 			<h1>Buttons</h1>
 			<div className="container-box">
-				<Select handleChangeEvent={handleVariantEvent} />
+				<Select text='Variant' options={variantOptions} handleChangeEvent={handleVariantEvent} />
 				<div className="container-buttons">
 					<Button text="Default" variant={targetVariant} color='default' />
 					<Button text="Default" variant={targetVariant} color='primary' />
@@ -84,6 +94,18 @@ function App() {
 				<div className='container-buttons'>
 					<Button text="Default" color='primary' startIcon='MdAddShoppingCart' />
 					<Button text="Default" color='primary' endIcon='MdAddShoppingCart' />
+				</div>
+			</div>
+
+			<div className="container-box">
+				<Select text='Icon' options={iconsOptions} handleChangeEvent={handleIconOptionEvent} />
+				<h3>Choose position</h3>
+				<ToggleButton handleOnClick={(e) => setDisabled(e.target.checked)} />
+				<div className="container-buttons">
+					{
+						disabled ? <Button text="Default" color='primary' startIcon={targetIcon} />
+							: <Button text="Default" color='primary' endIcon={targetIcon} />
+					}
 				</div>
 			</div>
 

@@ -62,6 +62,12 @@ h2 {
 	margin-bottom: 1em;
 }
 
+h3 {
+	font-size: .9rem;
+	font-weight: 400;
+	font-family: var(--ff-primary);
+}
+
 .container {
 	min-height: calc(100vh - 1em);
 	margin: 0 auto;

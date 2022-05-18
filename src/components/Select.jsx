@@ -1,16 +1,15 @@
 import './Select.scss';
 
 
-function Select({ options, handleChangeEvent }) {
+function Select({ text, options, handleChangeEvent }) {
 
+	options.map(it => console.log('it', it));
 
 	return (
 		<div className="container-select">
-			<h2>Variant Selection</h2>
+			<h2>{text} Selection</h2>
 			<select className="select" name="buttons" onChange={handleChangeEvent}>
-				<option value="default">Default</option>
-				<option value="outline">Outline</option>
-				<option value="text">Text</option>
+				{options.map(it => <option value={it}>{it}</option>)}
 			</select>
 		</div>
 	)
