@@ -1,7 +1,9 @@
 import './Select.scss';
 
 
-function Select({ handleChangeEvent }) {
+function Select({ options, handleChangeEvent }) {
+
+
 	return (
 		<div className="container-select">
 			<h2>Variant Selection</h2>

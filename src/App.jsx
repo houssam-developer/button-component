@@ -1,5 +1,5 @@
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css'
 import Button from './components/Button'
 import Footer from './components/Footer'
@@ -11,6 +11,10 @@ function App() {
 	const [targetVariant, setTargetVariant] = useState('default');
 	const [disableShadow, setDisableShadow] = useState(true);
 	const [disabled, setDisabled] = useState(false);
+
+	useEffect(() => {
+		const variantOptions = ['']
+	}, []);
 
 	function handleCheckEvent(e) {
 		console.log('checkEvent #checked: ', e.target.checked);
