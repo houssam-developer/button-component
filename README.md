@@ -39,7 +39,7 @@
 ## Overview
 ![My Image](img/screenshot-demo.png)
 
-This interior consultant page can be found here: "https://button-component-he.netlify.app/".
+This button component page can be found here: "https://button-component-he.netlify.app/".
 Thanks to that challenge, I learn to work efficiently in order to succeed.
 And I hope to make more beautifuls websites and become an expert in front-end developmemt :)
 
