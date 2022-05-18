@@ -10,7 +10,7 @@ import ToggleButton from './components/ToggleButton'
 function App() {
 	const [targetVariant, setTargetVariant] = useState('default');
 	const [targetIcon, setTargetIcon] = useState('MdAddShoppingCart');
-	const [disableShadow, setDisableShadow] = useState(true);
+	const [disableShadow, setDisableShadow] = useState(false);
 	const [disabled, setDisabled] = useState(false);
 	const [variantOptions, setVariantOptions] = useState([]);
 	const [iconsOptions, setIconsOptions] = useState([]);
