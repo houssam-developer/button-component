@@ -12,6 +12,7 @@ function App() {
 	const [targetIcon, setTargetIcon] = useState('MdAddShoppingCart');
 	const [disableShadow, setDisableShadow] = useState(false);
 	const [disabled, setDisabled] = useState(false);
+	const [disabledIcon, setDisabledIcon] = useState(false);
 	const [variantOptions, setVariantOptions] = useState([]);
 	const [iconsOptions, setIconsOptions] = useState([]);
 
@@ -100,10 +101,10 @@ function App() {
 			<div className="container-box">
 				<Select text='Icon' options={iconsOptions} handleChangeEvent={handleIconOptionEvent} />
 				<h3>Choose position</h3>
-				<ToggleButton handleOnClick={(e) => setDisabled(e.target.checked)} />
+				<ToggleButton handleOnClick={(e) => setDisabledIcon(e.target.checked)} />
 				<div className="container-buttons">
 					{
-						disabled ? <Button text="Default" color='primary' startIcon={targetIcon} />
+						disabledIcon ? <Button text="Default" color='primary' startIcon={targetIcon} />
 							: <Button text="Default" color='primary' endIcon={targetIcon} />
 					}
 				</div>
