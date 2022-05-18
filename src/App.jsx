@@ -2,14 +2,22 @@
 import './App.css'
 import Button from './components/Button'
 import Footer from './components/Footer'
+import ToggleButton from './components/ToggleButton'
 
 
 function App() {
 
+	function handleCheckEvent(e) {
+		console.log('checkEvent #checked: ', e.target.checked);
+	}
+
 	return (
 		<div className="container">
 			<h1>Buttons</h1>
-
+			<div className="container-box">
+				<h2>Variant Selection</h2>
+				<ToggleButton handleOnClick={handleCheckEvent} />
+			</div>
 			<div className='container-box'>
 				<h2>Default</h2>
 				<Button text="Default" />
