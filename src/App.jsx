@@ -10,6 +10,7 @@ import ToggleButton from './components/ToggleButton'
 function App() {
 	const [targetVariant, setTargetVariant] = useState('default');
 	const [disableShadow, setDisableShadow] = useState(true);
+	const [disabled, setDisabled] = useState(false);
 
 	function handleCheckEvent(e) {
 		console.log('checkEvent #checked: ', e.target.checked);
@@ -60,7 +61,7 @@ function App() {
 			<div className='container-box'>
 				<h2>Disable Shadow</h2>
 				<div className="container-buttons">
-					<ToggleButton handleOnClick={handleCheckEvent} />
+					<ToggleButton handleOnClick={(e) => setDisableShadow(e.target.checked)} />
 					{/* useState for disableShadow */}
 					<Button text="Default" color='' disableShadow={disableShadow} />
 				</div>
@@ -69,8 +70,8 @@ function App() {
 			<div className='container-box'>
 				<h2>Disabled Button</h2>
 				<div className='container-buttons'>
-					<Button text="Default" disabled />
-					<Button text="Default" disabled variant='text' />
+					<ToggleButton handleOnClick={(e) => setDisabled(e.target.checked)} />
+					<Button text="Default" disabled={disabled} variant='text' />
 				</div>
 			</div>
 

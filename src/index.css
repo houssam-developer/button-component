@@ -238,6 +238,7 @@ h2 {
 .btn--disabled {
 	color: var(--btn-fg-disabled);
 	background-color: var(--btn-bg-disabled);
+	cursor: not-allowed;
 }
 
 .btn--disabled:focus,
