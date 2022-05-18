@@ -1,7 +1,7 @@
 import React from 'react';
 import * as MdIcons from 'react-icons/md';
 
-function Button({ text, variant = 'default', disableShadow, disabled, startIcon = '', endIcon = '', size = '', color = 'default' }) {
+function Button({ text, variant = 'default', disableShadow, disabled, startIcon = '', endIcon = '', size = '', color = 'default', extendClassCSS }) {
 	// TODO guard clause in case of incorrect variant
 
 	console.log(`#text: ${text} #variant: ${variant} #disableShadow: ${disableShadow} #disabled: ${disabled} `);
@@ -22,6 +22,7 @@ function Button({ text, variant = 'default', disableShadow, disabled, startIcon 
 	console.log('setClassNames: ', setClassNames);
 
 	if (disableShadow) { setClassNames = `${setClassNames} btn--disableshadow` }
+
 	if (disabled) { setClassNames = `${setClassNames} btn--disabled` }
 
 	if (size === 'sm') { setClassNames = `${setClassNames} btn-size--small`; }
@@ -49,6 +50,7 @@ function Button({ text, variant = 'default', disableShadow, disabled, startIcon 
 	}
 
 	function handleBtnClickEvent(e) { console.log('click'); }
+
 
 	return (
 		<button className={setClassNames} disabled={disabled} onClick={handleBtnClickEvent}>

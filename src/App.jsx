@@ -9,18 +9,18 @@ import ToggleButton from './components/ToggleButton'
 
 function App() {
 	const [targetVariant, setTargetVariant] = useState('default');
+	const [disableShadow, setDisableShadow] = useState(true);
 
 	function handleCheckEvent(e) {
 		console.log('checkEvent #checked: ', e.target.checked);
+		setDisableShadow(e.target.checked);
 	}
 
 	function handleVariantEvent(e) {
 		const targetSelect = e.target; // target is the element that emits the event
 		const targetOption = targetSelect.options[targetSelect.selectedIndex].text;
-		console.log('+++++++++++++++++++++++++++++++++ select - changeEvent: ', targetOption);
 
 		setTargetVariant(targetOption.toLowerCase());
-
 	}
 
 	return (
@@ -59,9 +59,11 @@ function App() {
 			</div>
 			<div className='container-box'>
 				<h2>Disable Shadow</h2>
-				<ToggleButton handleOnClick={handleCheckEvent} />
-				{/* useState for disableShadow */}
-				<Button text="Default" color='primary' disableShadow />
+				<div className="container-buttons">
+					<ToggleButton handleOnClick={handleCheckEvent} />
+					{/* useState for disableShadow */}
+					<Button text="Default" color='' disableShadow={disableShadow} />
+				</div>
 			</div>
 
 			<div className='container-box'>
