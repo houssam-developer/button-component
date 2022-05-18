@@ -68,7 +68,7 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: var(--common-gap);
+	gap: 2em;
 }
 
 .container-box {
@@ -92,6 +92,10 @@ h2 {
 	align-items: flex-start;
 	justify-content: center;
 	gap: var(--common-gap);
+}
+
+.container-select {
+	margin-bottom: 1em;
 }
 
 @media screen and (min-width: 500px) {
